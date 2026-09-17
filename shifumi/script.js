@@ -14,6 +14,7 @@ document.getElementById("nbDefaites").textContent = nbDefaite;
 boutonPierre.addEventListener("click", function () {
   const choixRobotNombre = Math.floor(Math.random() * 3);
   document.getElementById("coupJouee").textContent = "Pierre";
+  document.getElementById("affichage-coups").style.display = "block";
 
   switch (choixRobotNombre) {
     case 0:
@@ -40,6 +41,7 @@ boutonPierre.addEventListener("click", function () {
 boutonFeuille.addEventListener("click", function () {
   const choixRobotNombre = Math.floor(Math.random() * 3);
   document.getElementById("coupJouee").textContent = "Feuille";
+  document.getElementById("affichage-coups").style.display = "block";
 
   switch (choixRobotNombre) {
     case 0:
@@ -65,6 +67,7 @@ boutonFeuille.addEventListener("click", function () {
 boutonCiseaux.addEventListener("click", function () {
   const choixRobotNombre = Math.floor(Math.random() * 3);
   document.getElementById("coupJouee").textContent = "Ciseaux";
+  document.getElementById("affichage-coups").style.display = "block";
 
   switch (choixRobotNombre) {
     case 0:
@@ -88,6 +91,7 @@ boutonCiseaux.addEventListener("click", function () {
 });
 
 boutonReinitialise.addEventListener("click", function () {
+  document.getElementById("affichage-coups").style.display = "none";
   nbVictoire = 0;
   nbEgalite = 0;
   nbDefaite = 0;
