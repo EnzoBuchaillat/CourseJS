@@ -14,11 +14,11 @@ body {
 }
 
 .bloc-jeu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   background: linear-gradient(red, blue);
-  padding-top: 200px;
-  padding-bottom: 200px;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding: 30px 5%;
   border-radius: 30px;
   border: 2px solid aqua;
 }
@@ -27,12 +27,10 @@ body {
   position: relative;
   z-index: 0;
   cursor: pointer;
-  padding-left: 60px;
+  padding-left: 30px;
   padding-top: 15px;
   padding-bottom: 15px;
-  padding-right: 60px;
-  margin-left: 30px;
-  margin-right: 30px;
+  padding-right: 30px;
   font-size: large;
   background-color: white;
   border-color: aqua;
@@ -55,4 +53,17 @@ body {
 
 .bouton-jeu:hover::before {
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  .bloc-jeu {
+    flex-direction: row;
+    padding: 200px 80px;
+    justify-content: center;
+  }
+
+  .bouton-jeu {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
 }
